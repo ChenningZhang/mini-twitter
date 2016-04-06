@@ -16,11 +16,18 @@ public interface UserDAO {
 	public int checkFollowed(int currUserId, int followerId) throws Exception;
 	
 	/*
-	 * Returns the logged in user's id.
+	 * Returns the logged in user.
 	 */
 	public User userAuthentication() throws Exception;
 	
+	/*
+	 * Logs in the user with id=userId.
+	 */
 	public void userLogin(int userId) throws Exception;
 	
+	/*
+	 * Returns true if user with id=userId exists in the databse,
+	 * false otherwise.
+	 */
 	public Boolean checkUserExist(int userId) throws Exception;
 }

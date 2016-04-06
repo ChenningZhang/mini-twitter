@@ -29,6 +29,12 @@ public class TweetController {
 		this.userDAO = userDAO;
 	}
 	
+	/*
+	 * URLs: localhost:8080/tweets?userId=userId
+	 * 		 localhost:8080/tweets?userId=userId&search=search
+	 * Returns a json object of the given user's tweets(self-tweets and tweets of users being followed).
+	 * Filter keyword is optional.
+	 */
 	@ResponseBody
 	@RequestMapping(value="/tweets", method=RequestMethod.GET)
 	public List<Tweet> getTweets(@RequestParam(required=true) int userId, @RequestParam(required=false) String search) throws Exception {
@@ -46,6 +52,12 @@ public class TweetController {
 		}
 	}
 	
+	/*
+	 * URL: localhost:8080/follow?currUserId=currUserId&followUserId=followUserId
+	 * Let user with id=currUserId start following user with id=followUserId.
+	 * Errors can be caused by: cannot follow user himself/herself;
+	 * 							cannot follow someone who is already being followed by him/her 
+	 */
 	@ResponseBody
 	@RequestMapping(value="/follow", method=RequestMethod.GET)
 	public Map<String, String> follow(@RequestParam(required=true) int currUserId, @RequestParam(required=true) int followUserId) throws Exception {
@@ -72,6 +84,12 @@ public class TweetController {
 		}
 	}
 	
+	/*
+	 * URL: localhost:8080/follow?currUserId=currUserId&unfollowUserId=unfollowUserId
+	 * Let user with id=currUserId stop following user with id=unfollowUserId.
+	 * Errors can be caused by: cannot unfollow user himself/herself;
+	 * 							cannot unfollow someone who is not being followed by him/her
+	 */
 	@ResponseBody
 	@RequestMapping(value="/unfollow", method=RequestMethod.GET)
 	public Map<String, String> unfollow(@RequestParam(required=true) int currUserId, @RequestParam(required=true) int unfollowUserId) throws Exception {
@@ -98,6 +116,10 @@ public class TweetController {
 		}
 	}
 	
+	/*
+	 * URL: localhost:8080/followers-and-following-users?userId=userId
+	 * Returns the given user's followers and users he/she is following.
+	 */
 	@ResponseBody
 	@RequestMapping(value="/followers-and-following-users", method=RequestMethod.GET)
 	public Map<String, List<String>> getFollowersAndFollowingUsers(@RequestParam(required=true) int userId) throws Exception {
@@ -117,6 +139,11 @@ public class TweetController {
 		}
 	}
 	
+	/*
+	 * URL: localhost:8080/login?userId=userId
+	 * Authorize the user with id=userId.
+	 * All other requests will fail until the user is authorized.
+	 */
 	@ResponseBody
 	@RequestMapping(value="/login")
 	public Map<String, String> userLogin(@RequestParam(required=true) int userId) throws Exception {

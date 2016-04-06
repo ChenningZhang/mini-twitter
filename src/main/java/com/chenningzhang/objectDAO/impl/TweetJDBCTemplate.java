@@ -25,7 +25,6 @@ public class TweetJDBCTemplate implements TweetDAO {
 	
 	@Override
 	public List<Tweet> getTweets(int userId, String searchKeyword) throws Exception {
-		// TODO Auto-generated method stub
 		String sql = "";
 		if (searchKeyword == null) {
 			sql = "SELECT * FROM tweets WHERE userId = :userId" +
