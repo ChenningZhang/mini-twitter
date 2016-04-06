@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:13:29 -0700] "GET /login?userId=1 HTTP/1.1" 200 46 http-bio-8080-exec-6 829
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:13:43 -0700] "GET / HTTP/1.1" 200 1544 http-bio-8080-exec-6 30
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:14:00 -0700] "GET /login?userId=1 HTTP/1.1" 200 46 http-bio-8080-exec-6 160
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:14:17 -0700] "GET /tweets?userId=1 HTTP/1.1" 200 130 http-bio-8080-exec-6 178
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:14:17 -0700] "GET /tweets?userId=1 HTTP/1.1" 200 130 http-bio-8080-exec-6 103
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:14:28 -0700] "GET /followers-and-following-users?userId=1 HTTP/1.1" 200 78 http-bio-8080-exec-6 149
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:15:55 -0700] "GET /tweets?userId=1 HTTP/1.1" 200 130 http-bio-8080-exec-10 460
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:16:31 -0700] "GET /tweets?userId=2 HTTP/1.1" 401 951 http-bio-8080-exec-4 285
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:17:09 -0700] "GET /login?userId=2 HTTP/1.1" 200 46 http-bio-8080-exec-4 203
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:17:56 -0700] "GET /followers-and-following-users?userId=1 HTTP/1.1" 401 951 http-bio-8080-exec-4 131
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:17:58 -0700] "GET /followers-and-following-users?userId=2 HTTP/1.1" 200 78 http-bio-8080-exec-4 100
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:18:39 -0700] "GET /follow?currUserId=2&followUserId=1 HTTP/1.1" 200 48 http-bio-8080-exec-4 136
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:19:06 -0700] "GET /follow?currUserId=2&followUserId=3 HTTP/1.1" 200 46 http-bio-8080-exec-4 312
