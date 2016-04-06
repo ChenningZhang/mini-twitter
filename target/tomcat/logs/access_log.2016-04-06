@@ -11,3 +11,5 @@
 0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:17:58 -0700] "GET /followers-and-following-users?userId=2 HTTP/1.1" 200 78 http-bio-8080-exec-4 100
 0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:18:39 -0700] "GET /follow?currUserId=2&followUserId=1 HTTP/1.1" 200 48 http-bio-8080-exec-4 136
 0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:19:06 -0700] "GET /follow?currUserId=2&followUserId=3 HTTP/1.1" 200 46 http-bio-8080-exec-4 312
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:28:13 -0700] "GET /follow?currUserId=2&followUserId=3 HTTP/1.1" 200 48 http-bio-8080-exec-5 371
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:00:28:16 -0700] "GET / HTTP/1.1" 200 1544 http-bio-8080-exec-8 32
