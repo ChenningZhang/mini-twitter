@@ -4,6 +4,7 @@
 * Check the schema file(located at mini-twitter/src/main/resources) and make sure the database is set up successfully.
 * In Eclipse, select Run -> Run As -> Maven build...
 * In Goals, type in 'tomcat7:run', shown in the picture below.
+	![alt tag](https://raw.githubusercontent.com/ChenningZhang/mini-twitter/master/readme_images/tomcat_inst.png)
 * Wait till the Application starts, open up browser, type in url "localhost:8080/"
 * It should redirect you to the homepage, which shows the API of this Application.
 
